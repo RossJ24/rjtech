@@ -12,6 +12,7 @@
     "@types/cheerio": "^0.22.29",
     "@types/file-loader": "^5.0.0",
     "@types/react-chartjs-2": "^2.5.7",
+    "chartjs": "^0.3.24",
     "cheerio": "^1.0.0-rc.10",
     "next": "10.2.3",
     "next-images": "^1.8.1",
