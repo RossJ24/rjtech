@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.titleContainer {
+    border-radius: 5px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.524);
+    opacity: .8;
+    color: black;
+    height: fit-content;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.cardsContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width:600px) {
+    .cardsContainer {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

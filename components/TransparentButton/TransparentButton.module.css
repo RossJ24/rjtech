@@ -1,0 +1,37 @@
+.buttonWT {
+    background: transparent;
+    color: white;
+    border-radius: 12px;
+    font-style: bold;
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    width: fit-content;
+    backdrop-filter: blur(1px);
+}
+
+.buttonBT {
+    background: transparent;
+    color: black;
+    border-radius: 12px;
+    font-style: bold;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    width: fit-content;
+    backdrop-filter: blur(1px);
+}
+
+.buttonWT:hover {
+    background: rgba(247, 244, 244, 0.1);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.buttonBT:hover {
+    background: rgba(247, 244, 244, 0.1);
+    border: 1px solid white;
+    cursor: pointer;
+}

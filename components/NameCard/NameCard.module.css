@@ -1,0 +1,56 @@
+.container {
+    background-color: rgba(255, 255, 255, 0.524);
+    color: black;
+    height: fit-content;
+    width: 450px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    border-radius: 25px;
+    backdrop-filter: blur(2px);
+    margin: 2rem;
+    justify-self: center;
+}
+
+.headshotcontainer {
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
+    margin: 1rem;
+    justify-self: center;
+}
+
+.headshot {
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.bio {
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.roles {
+    margin-top: .5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: rgb(92, 92, 92);
+}
+
+.links {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        width: 350px;
+    }
+}
