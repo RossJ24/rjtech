@@ -12,8 +12,8 @@ export const AboutCard = () => {
             <p className={styles.title}>About Me</p>
             {about
                 .split('\n')
-                .map((ele) => {
-                    return < p className={styles.about}>
+                .map((ele, idx) => {
+                    return <p className={styles.about} key={-idx}>
                         {ele}
                     </p>
                 })
