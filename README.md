@@ -1,3 +1,3 @@
 # RJTech
 
-My portfolio website.
+My portfolio website written in Next.js.
