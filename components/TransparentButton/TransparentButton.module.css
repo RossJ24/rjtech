@@ -9,6 +9,7 @@
     outline: none;
     width: fit-content;
     backdrop-filter: blur(1px);
+    border: 1px solid transparent;
 }
 
 .buttonBT {
@@ -22,6 +23,7 @@
     outline: none;
     width: fit-content;
     backdrop-filter: blur(1px);
+    border: 1px solid transparent;
 }
 
 .buttonWT:hover {
@@ -32,6 +34,6 @@
 
 .buttonBT:hover {
     background: rgba(247, 244, 244, 0.1);
-    border: 1px solid white;
+    border: 1px solid black;
     cursor: pointer;
 }
