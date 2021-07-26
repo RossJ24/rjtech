@@ -32,7 +32,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:768px) {
     .cardsContainer {
         display: grid;
         justify-content: center;
