@@ -29,3 +29,13 @@
         display: contents;
     }
 }
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .menu {
+        display: contents;
+    }
+}

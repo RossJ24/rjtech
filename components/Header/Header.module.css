@@ -15,7 +15,13 @@
     grid-row: 1;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:768px) {
+    .header {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
     .header {
         display: none;
     }
