@@ -83,7 +83,7 @@ const shuffle = (arr: string[]) => {
  * @returns 
  */
 const getRepoTitle = ($: cheerio.Root): string => {
-    const searchQuery = '#js-repo-pjax-container > div.hx_page-header-bg.pt-3.hide-full-screen.mb-5 > div.d-flex.mb-3.px-3.px-md-4.px-lg-5 > div > h1 > strong > a';
+    const searchQuery = '#repository-container-header > div.d-flex.mb-3.px-3.px-md-4.px-lg-5 > div > h1 > strong > a';
     return $(searchQuery).text();
 }
 
