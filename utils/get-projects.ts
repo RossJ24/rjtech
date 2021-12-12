@@ -94,7 +94,7 @@ const getRepoTitle = ($: cheerio.Root): string => {
  * @returns languages an array of the languages used
  */
 const getRepoLanguages = ($: cheerio.Root): string[] => {
-    const searchQuery = '#repo-content-pjax-container > div > div.gutter-condensed.gutter-lg.flex-column.flex-md-row.d-flex > div.flex-shrink-0.col-12.col-md-3 > div > div > div > ul > li > a > span.color-text-primary.text-bold.mr-1';
+    const searchQuery = '#repo-content-pjax-container > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div > div > ul > li > a > span.color-fg-default.text-bold.mr-1';
     const languages: string[] = [];
     $(searchQuery).each((_, ele) => languages.push($(ele).text()));
     return languages;
@@ -107,13 +107,14 @@ const getRepoLanguages = ($: cheerio.Root): string[] => {
  * @returns amounts an array representing the amount the language was used/
  */
 const getRepoLanguageAmounts = ($: cheerio.Root): number[] => {
-    const searchQuery = '#repo-content-pjax-container > div > div.gutter-condensed.gutter-lg.flex-column.flex-md-row.d-flex > div.flex-shrink-0.col-12.col-md-3 > div > div > div > ul > li > a > span'
+    const searchQuery = '#repo-content-pjax-container > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div > div > ul > li > a > span';
     const amounts: string[] = [];
     $(searchQuery).each((_, ele) => amounts.push($(ele).text()));
     return amounts
         .filter((ele, idx) => idx % 2 == 1)
         .map((ele) => { return ele.replace("%", "") })
         .map((ele) => { return parseFloat(ele) })
+
 }
 
 /**
