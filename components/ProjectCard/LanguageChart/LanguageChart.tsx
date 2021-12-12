@@ -20,7 +20,7 @@ export const LanguageChart = ({ languages, percentages }: LCProps) => {
     }
 
     const options = {
-        indexAxis: 'x',
+        indexAxis: 'x' as const,
         elements: {
             bar: {
                 borderWidth: 2,
@@ -34,5 +34,5 @@ export const LanguageChart = ({ languages, percentages }: LCProps) => {
             },
         },
     }
-    return (<Bar type="bar" data={data} options={options} />);
+    return (<Bar data={data} options={options} />);
 }

@@ -11,7 +11,6 @@
     "@types/canvasjs": "^1.9.6",
     "@types/cheerio": "^0.22.29",
     "@types/file-loader": "^5.0.0",
-    "@types/react-chartjs-2": "^2.5.7",
     "chart.js": "^3.4.0",
     "cheerio": "^1.0.0-rc.10",
     "next": "^12.0.2",
