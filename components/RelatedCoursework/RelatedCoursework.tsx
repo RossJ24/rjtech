@@ -10,7 +10,7 @@ export type RelatedCourseWorkProps = {
 
 export const RelatedCourseWork: React.FC<RelatedCourseWorkProps> = ({ courses }: RelatedCourseWorkProps) => {
     return (
-        <div className={styles.container} id="relevantcoursework">
+        <div className={styles.container} id="relatedcoursework">
             <div className={styles.titleContainer}>
                 <p className={styles.title}>Related Coursework</p>
             </div>

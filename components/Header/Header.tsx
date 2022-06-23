@@ -7,11 +7,11 @@ export const Header = () => {
             <TransparentButton
                 WhiteText={true}
                 clickFn={(e) => {
-                    location.href = '#relevantcoursework';
+                    location.href = '#relatedcoursework';
                     window.history.replaceState({}, "", "/");
                 }}
             >
-                Technical Coursework
+                Related Coursework
             </TransparentButton>
             <TransparentButton
                 WhiteText={true}

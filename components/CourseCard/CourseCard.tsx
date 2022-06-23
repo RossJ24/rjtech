@@ -10,7 +10,7 @@ export const CourseCard = ({ course }: CCProps) => {
     return (
         <div className={styles.container}>
             <span className={styles.title}>{`${course.code}: ${course.title}`}</span>
-            //TODO: Fill out course descriptions and include them in the card.
+            {/*TODO: Fill out course descriptions and include them in the card.*/}
             {/* <hr className={styles.divider} />
             <span className={styles.description}>{course.description}</span> */}
             <hr className={styles.divider} />
@@ -19,7 +19,7 @@ export const CourseCard = ({ course }: CCProps) => {
                     Languages Used
                 </div>
                 <hr className={styles.divider} />
-                {course.languages.map((lang, idx) => <span  className={styles.language}key={idx}>{lang}</span>)}
+                {course.languages.map((lang, idx) => <span className={styles.language} key={idx}>{lang}</span>)}
             </div>
         </div>
     );
