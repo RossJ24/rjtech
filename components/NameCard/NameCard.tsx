@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from './NameCard.module.css';
 import profileflick from '../../images/prof.jpg';
 
-const bio = "I am currently a Junior at Yale University studying Computer Science with a certificate in Data Science.";
+const bio = "I am currently a Rising Senior at Yale University studying Computer Science with a certificate in Data Science.";
 export const NameCard = () => {
     return (
         <div className={styles.container}>

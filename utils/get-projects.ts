@@ -1,5 +1,4 @@
 import cheerio from "cheerio";
-
 const GH = "https://github.com";
 const PERSONAL_GH = "https://github.com/RossJ24?tab=repositories";
 const YES_GH = "https://github.com/yesatyaleTech?tab=repositories";
@@ -38,7 +37,7 @@ export const getProjects = async () => {
  * @returns 
  */
 const getRepos = async (ghLink: string): Promise<string[]> => {
-    const response = await fetch(ghLink);
+    const response = await fetch(ghLink)
     const htmlString = await response.text();
     const $ = cheerio.load(htmlString);
     const searchQuery = '[itemprop="name codeRepository"]';
@@ -56,10 +55,8 @@ const getRepos = async (ghLink: string): Promise<string[]> => {
  */
 const getProjectURLs = async (): Promise<string[]> => {
     let personalRepos = await getRepos(PERSONAL_GH);
-    let yesRepos = await getRepos(YES_GH);
-    let combinedRepos = [...personalRepos, ...yesRepos];
-    shuffle(combinedRepos);
-    return combinedRepos;
+    shuffle(personalRepos);
+    return personalRepos;
 }
 
 /**
@@ -83,18 +80,18 @@ const shuffle = (arr: string[]) => {
  * @returns 
  */
 const getRepoTitle = ($: cheerio.Root): string => {
-    const searchQuery = '#repository-container-header > div.d-flex.mb-3.px-3.px-md-4.px-lg-5 > div > h1 > strong > a';
+    const searchQuery = '#readme > div.Box-body.px-5.pb-5 > article > h1';
     return $(searchQuery).text();
 }
 
 /**
- * Gets languages used in the repository
+ * Gets languages used in the repository 
  * 
  * @param $ a cheerio root for performing html document queries
  * @returns languages an array of the languages used
  */
 const getRepoLanguages = ($: cheerio.Root): string[] => {
-    const searchQuery = '#repo-content-pjax-container > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div > div > ul > li > a > span.color-fg-default.text-bold.mr-1';
+    const searchQuery = '.color-fg-default.text-bold.mr-1'
     const languages: string[] = [];
     $(searchQuery).each((_, ele) => languages.push($(ele).text()));
     return languages;
@@ -107,11 +104,10 @@ const getRepoLanguages = ($: cheerio.Root): string[] => {
  * @returns amounts an array representing the amount the language was used/
  */
 const getRepoLanguageAmounts = ($: cheerio.Root): number[] => {
-    const searchQuery = '#repo-content-pjax-container > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div > div > ul > li > a > span';
+    const searchQuery = '.d-inline > a > span:nth-child(3)';
     const amounts: string[] = [];
     $(searchQuery).each((_, ele) => amounts.push($(ele).text()));
     return amounts
-        .filter((ele, idx) => idx % 2 == 1)
         .map((ele) => { return ele.replace("%", "") })
         .map((ele) => { return parseFloat(ele) })
 

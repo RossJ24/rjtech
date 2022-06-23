@@ -6,6 +6,15 @@ export const Header = () => {
         <header className={styles.header}>
             <TransparentButton
                 WhiteText={true}
+                clickFn={(e) => {
+                    location.href = '#relevantcoursework';
+                    window.history.replaceState({}, "", "/");
+                }}
+            >
+                Technical Coursework
+            </TransparentButton>
+            <TransparentButton
+                WhiteText={true}
                 clickFn={(e) => window.open('https://github.com/RossJ24', '_blank')}
             >
                 Github
@@ -18,9 +27,9 @@ export const Header = () => {
             </TransparentButton>
             <TransparentButton
                 WhiteText={true}
-                clickFn={(e) => window.open('https://www.canvas.com/app/profile/ross-johnson', '_blank')}
+                clickFn={(e) => window.open('https://www.untapped.io/app/profile/ross-johnson', '_blank')}
             >
-                Canvas
+                Untapped
             </TransparentButton>
             <TransparentButton
                 WhiteText={true}

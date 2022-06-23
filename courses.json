@@ -1,0 +1,73 @@
+{
+    "courses": [{
+            "code": "CPSC 223",
+            "title": "Data Structures & Programming Techniques",
+            "school": "Yale University",
+            "languages": ["C"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 257",
+            "title": "Information Security in the Real World",
+            "school": "Yale University",
+            "languages": ["Python"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 323",
+            "title": "Introduction to Operating Systems & Computer Organization",
+            "school": "Yale University",
+            "languages": ["C", "C++"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 474",
+            "title": "Computational Intelligence for Games",
+            "school": "Yale University",
+            "languages": ["C++", "Python", "Go"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 452",
+            "title": "Deep Learning and Neural Networks Theory and Practice",
+            "school": "Yale University",
+            "languages": ["Python"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 365",
+            "title": "Algorithms",
+            "school": "Yale University",
+            "languages": ["Kotlin*", "Python*", "Java*"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 422",
+            "title": "Operating Systems",
+            "school": "Yale University",
+            "languages": ["C"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 438",
+            "title": "Big Data Systems",
+            "school": "Yale University",
+            "languages": ["C", "C++"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 425",
+            "title": "Mobile and Embedded Systems",
+            "school": "Yale University",
+            "languages": ["C", "Rust"],
+            "description": ""
+        },
+        {
+            "code": "CPSC 426",
+            "title": "Building Distributed Systems",
+            "school": "Yale University",
+            "languages": ["Go"],
+            "description": ""
+        }
+    ]
+}

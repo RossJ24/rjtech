@@ -3,23 +3,30 @@ import { GetStaticProps } from 'next'
 import { Header } from '../components/Header/Header';
 import styles from '../styles/Home.module.css'
 import { NameCard } from '../components/NameCard/NameCard';
-import { Projects, ProjectsProps } from '../components/Projects/Projects';
-import { AboutCard } from '../components/AboutCard/AboutCard';
+import { Projects } from '../components/Projects/Projects';
 import { getProjects, Project } from '../utils/get-projects';
 import { HamburgerMenu } from '../components/HamburgerMenu/HamburgerMenu';
+import { RelatedCourseWork } from '../components/RelatedCoursework/RelatedCoursework';
+import { getCourses, Course } from '../utils/get-courses';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const regenTimeout = 60 * 60 * 4;
   let projects: Project[] = await getProjects();
+  let courses: Course[] = getCourses();
   return {
     revalidate: regenTimeout,
     props: {
-      projects,
+      projects, courses
     }
   }
 }
 
-export default function Home({ projects }: ProjectsProps) {
+type HomeProps = {
+  projects: Project[],
+  courses: Course[]
+}
+
+export default function Home({ projects, courses }: HomeProps) {
   return (
     <>
       <Head>
@@ -34,9 +41,11 @@ export default function Home({ projects }: ProjectsProps) {
         <Header />
         <main className={styles.main}>
           <NameCard />
-          <AboutCard />
           <Projects
             projects={projects}
+          />
+          <RelatedCourseWork
+            courses={courses}
           />
         </main>
       </div>

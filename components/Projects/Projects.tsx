@@ -2,7 +2,7 @@ import { Project } from '../../utils/get-projects';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import styles from './Projects.module.css';
 
-export type ProjectsProps = {
+type ProjectsProps = {
     projects: Project[],
 }
 
