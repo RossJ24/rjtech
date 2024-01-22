@@ -1,9 +1,9 @@
-import { Project } from '../../utils/get-projects';
+// import { Project } from '../../utils/get-projects';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import styles from './Projects.module.css';
 
 type ProjectsProps = {
-    projects: Project[],
+    projects: any[],
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }: ProjectsProps) => {

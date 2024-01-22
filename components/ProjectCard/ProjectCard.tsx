@@ -1,9 +1,9 @@
-import { Project } from '../../utils/get-projects';
+// import { Project } from '../../utils/get-projects';
 import styles from './ProjectCard.module.css';
 import { LanguageChart } from './LanguageChart/LanguageChart';
 
 type PCProps = {
-    project: Project
+     project: any
 }
 
 export const ProjectCard: React.FC<PCProps> = ({ project }: PCProps) => {

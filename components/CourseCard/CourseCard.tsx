@@ -1,4 +1,3 @@
-import projects from "../../pages/api/projects";
 import { Course } from "../../utils/get-courses";
 import styles from "./CourseCard.module.css"
 
