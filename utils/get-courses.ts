@@ -9,7 +9,7 @@ export type Course = {
 
 export const getCourses = (): Course[] => {
     let courses: Course[] = [];
-    return COURSE_FILE.courses.map((course) => getCourse(course));
+    return COURSE_FILE.courses.map((course) => getCourse(course)).reverse();
 }
 
 const getCourse = (courseJSON: any) => {

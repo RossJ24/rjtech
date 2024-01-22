@@ -34,16 +34,6 @@ export const HamburgerMenu = () => {
                 >
                     Canvas
                 </TransparentButton>
-                <hr className={styles.divider}/>
-                <TransparentButton
-                    WhiteText={true}
-                    clickFn={(e) => {
-                        location.href = '#projectportfolio';
-                        window.history.replaceState({}, "", "/");
-                    }}
-                >
-                    Project Portfolio
-                </TransparentButton>
             </div>
         </>
     )

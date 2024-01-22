@@ -31,15 +31,6 @@ export const Header = () => {
             >
                 Untapped
             </TransparentButton>
-            <TransparentButton
-                WhiteText={true}
-                clickFn={(e) => {
-                    location.href = '#projectportfolio';
-                    window.history.replaceState({}, "", "/");
-                }}
-            >
-                Project Portfolio
-            </TransparentButton>
         </header>
     );
 }

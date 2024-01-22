@@ -10,7 +10,7 @@ export const TransparentButton: React.FC<TBProps> = ({ children, WhiteText, clic
     let styling = WhiteText ? styles.buttonWT : styles.buttonBT;
     return (
         <button className={styling} onClick={(e) => { if (clickFn) { clickFn(e) } }}>
-            {children}
+            <span className={styles.contents}>{children}</span>
         </button>
     );
 }

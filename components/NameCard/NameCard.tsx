@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from './NameCard.module.css';
-import profileflick from '../../images/prof.jpg';
+import profileflick from '../../images/prof3.jpg';
 
-const bio = "I am currently a Rising Senior at Yale University studying Computer Science with a certificate in Data Science.";
+const bio = "I am a recent grad from Yale University who studied Computer Science with a certificate in Data Science.";
 export const NameCard = () => {
     return (
         <div className={styles.container}>
@@ -11,13 +11,7 @@ export const NameCard = () => {
             </div>
             <span className={styles.name}>Ross Johnson</span>
             <span className={styles.roles}>
-                <a
-                    className={styles.links}
-                    href="https://www.nsbe.org/"
-                    target="_blank"
-                >
-                     Yale NSBE President
-                </a>
+                SWE @ Google
             </span>
             <span className={styles.bio}>{bio}</span>
         </div>

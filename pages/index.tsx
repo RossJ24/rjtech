@@ -4,29 +4,26 @@ import { Header } from '../components/Header/Header';
 import styles from '../styles/Home.module.css'
 import { NameCard } from '../components/NameCard/NameCard';
 import { Projects } from '../components/Projects/Projects';
-import { getProjects, Project } from '../utils/get-projects';
 import { HamburgerMenu } from '../components/HamburgerMenu/HamburgerMenu';
 import { RelatedCourseWork } from '../components/RelatedCoursework/RelatedCoursework';
 import { getCourses, Course } from '../utils/get-courses';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const regenTimeout = 60 * 60 * 4;
-  let projects: Project[] = await getProjects();
   let courses: Course[] = getCourses();
   return {
     revalidate: regenTimeout,
     props: {
-      projects, courses
+      courses
     }
   }
 }
 
 type HomeProps = {
-  projects: Project[],
   courses: Course[]
 }
 
-export default function Home({ projects, courses }: HomeProps) {
+export default function Home({ courses }: HomeProps) {
   return (
     <>
       <Head>
@@ -41,9 +38,6 @@ export default function Home({ projects, courses }: HomeProps) {
         <Header />
         <main className={styles.main}>
           <NameCard />
-          <Projects
-            projects={projects}
-          />
           <RelatedCourseWork
             courses={courses}
           />
